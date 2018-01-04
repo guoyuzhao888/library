@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <display-name></display-name>	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <!-- 用户登陆 -->
+  <servlet>
+     <description>This is the description of my J2EE component</description>
+     <display-name>This is the display name of my J2EE component</display-name>
+     <servlet-name>LoginServlet</servlet-name>
+     <servlet-class>application.admin.servlet.LoginServlet</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+     <servlet-name>LoginServlet</servlet-name>
+     <url-pattern>/admin/index</url-pattern>
+   </servlet-mapping>
+   
+    <!-- 用户列表 -->
+	<servlet>
+	   <description>This is the description of my J2EE component</description>
+	   <display-name>This is the display name of my J2EE component</display-name>
+	   <servlet-name>UserServlet</servlet-name>
+	   <servlet-class>application.admin.servlet.user.UserServlet</servlet-class>
+	 </servlet>
+	
+	 <servlet-mapping>
+	   <servlet-name>UserServlet</servlet-name>
+	   <url-pattern>/admin/user/user_list</url-pattern>
+	 </servlet-mapping>
+	 
+	 <!-- 借书记录 -->
+	<servlet>
+	   <description>This is the description of my J2EE component</description>
+	   <display-name>This is the display name of my J2EE component</display-name>
+	   <servlet-name>UserBookRecordServlet</servlet-name>
+	   <servlet-class>application.admin.servlet.user.UserBookRecordServlet</servlet-class>
+	 </servlet>
+	
+	 <servlet-mapping>
+	   <servlet-name>UserBookRecordServlet</servlet-name>
+	   <url-pattern>/admin/user/user_book_record</url-pattern>
+	 </servlet-mapping>
+	 <!-- 删除用户 -->
+	<servlet>
+	   <description>This is the description of my J2EE component</description>
+	   <display-name>This is the display name of my J2EE component</display-name>
+	   <servlet-name>UserDelServlet</servlet-name>
+	   <servlet-class>application.admin.servlet.user.UserDelServlet</servlet-class>
+	 </servlet>
+	
+	 <servlet-mapping>
+	   <servlet-name>UserDelServlet</servlet-name>
+	   <url-pattern>/admin/user/user_del</url-pattern>
+	 </servlet-mapping>
+	 
+	 <!-- 添加图书类别 -->
+	<servlet>
+	   <description>This is the description of my J2EE component</description>
+	   <display-name>This is the display name of my J2EE component</display-name>
+	   <servlet-name>CateServlet</servlet-name>
+	   <servlet-class>application.admin.servlet.cate.CateServlet</servlet-class>
+	 </servlet>
+	
+	 <servlet-mapping>
+	   <servlet-name>CateServlet</servlet-name>
+	   <url-pattern>/admin/cate/add_book_cate</url-pattern>
+	 </servlet-mapping>
+	 
+	  <!-- 统计图书类别 -->
+	<servlet>
+	   <description>This is the description of my J2EE component</description>
+	   <display-name>This is the display name of my J2EE component</display-name>
+	   <servlet-name>CateListServlet</servlet-name>
+	   <servlet-class>application.admin.servlet.cate.CateListServlet</servlet-class>
+	 </servlet>
+	
+	 <servlet-mapping>
+	   <servlet-name>CateListServlet</servlet-name>
+	   <url-pattern>/admin/cate/book_cate_list</url-pattern>
+	 </servlet-mapping>
+	 
+	 <!-- 修改图书类别 -->
+	<servlet>
+	   <description>This is the description of my J2EE component</description>
+	   <display-name>This is the display name of my J2EE component</display-name>
+	   <servlet-name>EditBookCateServlet</servlet-name>
+	   <servlet-class>application.admin.servlet.cate.EditBookCateServlet</servlet-class>
+	 </servlet>
+	
+	 <servlet-mapping>
+	   <servlet-name>EditBookCateServlet</servlet-name>
+	   <url-pattern>/admin/cate/edit_book_cate</url-pattern>
+	 </servlet-mapping>
+	 
+	 <!-- 删除图书类别 -->
+	<servlet>
+	   <description>This is the description of my J2EE component</description>
+	   <display-name>This is the display name of my J2EE component</display-name>
+	   <servlet-name>DelBookCateServlet</servlet-name>
+	   <servlet-class>application.admin.servlet.cate.DelBookCateServlet</servlet-class>
+	 </servlet>
+	
+	 <servlet-mapping>
+	   <servlet-name>DelBookCateServlet</servlet-name>
+	   <url-pattern>/admin/cate/del_book_cate</url-pattern>
+	 </servlet-mapping>
+	 
+	 <!-- 添加图书 -->
+	<servlet>
+	   <description>This is the description of my J2EE component</description>
+	   <display-name>This is the display name of my J2EE component</display-name>
+	   <servlet-name>AddBookServlet</servlet-name>
+	   <servlet-class>application.admin.servlet.book.AddBookServlet</servlet-class>
+	 </servlet>
+	
+	 <servlet-mapping>
+	   <servlet-name>AddBookServlet</servlet-name>
+	   <url-pattern>/admin/book/add_book</url-pattern>
+	 </servlet-mapping>
+	 
+	 <!-- 图书列表 -->
+	<servlet>
+	   <description>This is the description of my J2EE component</description>
+	   <display-name>This is the display name of my J2EE component</display-name>
+	   <servlet-name>BookListServlet</servlet-name>
+	   <servlet-class>application.admin.servlet.book.BookListServlet</servlet-class>
+	 </servlet>
+	
+	 <servlet-mapping>
+	   <servlet-name>BookListServlet</servlet-name>
+	   <url-pattern>/admin/book/book_list</url-pattern>
+	 </servlet-mapping>
+	 
+	 <!-- 修改图书信息 -->
+	<servlet>
+	   <description>This is the description of my J2EE component</description>
+	   <display-name>This is the display name of my J2EE component</display-name>
+	   <servlet-name>EditBookServlet</servlet-name>
+	   <servlet-class>application.admin.servlet.book.EditBookServlet</servlet-class>
+	 </servlet>
+	
+	 <servlet-mapping>
+	   <servlet-name>EditBookServlet</servlet-name>
+	   <url-pattern>/admin/book/edit_book</url-pattern>
+	 </servlet-mapping>
+	 
+	  <!-- 删除图书信息 -->
+	<servlet>
+	   <description>This is the description of my J2EE component</description>
+	   <display-name>This is the display name of my J2EE component</display-name>
+	   <servlet-name>DelBookServlet</servlet-name>
+	   <servlet-class>application.admin.servlet.book.DelBookServlet</servlet-class>
+	 </servlet>
+	
+	 <servlet-mapping>
+	   <servlet-name>DelBookServlet</servlet-name>
+	   <url-pattern>/admin/book/del_book</url-pattern>
+	 </servlet-mapping>
+	 
+	<!-- 查询借书记录 -->
+	<servlet>
+	   <description>This is the description of my J2EE component</description>
+	   <display-name>This is the display name of my J2EE component</display-name>
+	   <servlet-name>BorrowRecordServlet</servlet-name>
+	   <servlet-class>application.admin.servlet.book.BorrowRecordServlet</servlet-class>
+	 </servlet>
+	
+	 <servlet-mapping>
+	   <servlet-name>BorrowRecordServlet</servlet-name>
+	   <url-pattern>/admin/book/borrow_record</url-pattern>
+	 </servlet-mapping>
+	 <!-- 修改管理员密码 -->
+	<servlet>
+	   <description>This is the description of my J2EE component</description>
+	   <display-name>This is the display name of my J2EE component</display-name>
+	   <servlet-name>EditPasswordServlet</servlet-name>
+	   <servlet-class>application.admin.servlet.admin.EditPasswordServlet</servlet-class>
+	 </servlet>
+	
+	 <servlet-mapping>
+	   <servlet-name>EditPasswordServlet</servlet-name>
+	   <url-pattern>/admin/common/edit_password</url-pattern>
+	 </servlet-mapping>
+	 
+	  <!-- 注册用户 -->
+	<servlet>
+	   <description>This is the description of my J2EE component</description>
+	   <display-name>This is the display name of my J2EE component</display-name>
+	   <servlet-name>UserRegisterServlet</servlet-name>
+	   <servlet-class>application.index.servlet.user.UserRegisterServlet</servlet-class>
+	 </servlet>
+	
+	 <servlet-mapping>
+	   <servlet-name>UserRegisterServlet</servlet-name>
+	   <url-pattern>/index/login/register</url-pattern>
+	 </servlet-mapping>
+	 
+	 <!-- 验证用户登陆 -->
+	<servlet>
+	   <description>This is the description of my J2EE component</description>
+	   <display-name>This is the display name of my J2EE component</display-name>
+	   <servlet-name>CheckLoginServlet</servlet-name>
+	   <servlet-class>application.index.servlet.user.CheckLoginServlet</servlet-class>
+	 </servlet>
+	
+	 <servlet-mapping>
+	   <servlet-name>CheckLoginServlet</servlet-name>
+	   <url-pattern>/index/login/check_login</url-pattern>
+	 </servlet-mapping>
+	 
+	 <!-- 添加借阅记录 -->
+	<servlet>
+	   <description>This is the description of my J2EE component</description>
+	   <display-name>This is the display name of my J2EE component</display-name>
+	   <servlet-name>AddBorrowRecordServlet</servlet-name>
+	   <servlet-class>application.index.servlet.borrow.AddBorrowRecordServlet</servlet-class>
+	 </servlet>
+	
+	 <servlet-mapping>
+	   <servlet-name>AddBorrowRecordServlet</servlet-name>
+	   <url-pattern>/index/index/add_borrow_record</url-pattern>
+	 </servlet-mapping>
+	 
+	 <!-- 归还图书 -->
+	<servlet>
+	   <description>This is the description of my J2EE component</description>
+	   <display-name>This is the display name of my J2EE component</display-name>
+	   <servlet-name>DelBorrowRecordServlet</servlet-name>
+	   <servlet-class>application.index.servlet.borrow.DelBorrowRecordServlet</servlet-class>
+	 </servlet>
+	
+	 <servlet-mapping>
+	   <servlet-name>DelBorrowRecordServlet</servlet-name>
+	   <url-pattern>/index/index/del_borrow_record</url-pattern>
+	 </servlet-mapping>
+	 
+	 <!-- 正在借阅的图书 -->
+	<servlet>
+	   <description>This is the description of my J2EE component</description>
+	   <display-name>This is the display name of my J2EE component</display-name>
+	   <servlet-name>BorrowingServlet</servlet-name>
+	   <servlet-class>application.index.servlet.borrow.BorrowingServlet</servlet-class>
+	 </servlet>
+	
+	 <servlet-mapping>
+	   <servlet-name>BorrowingServlet</servlet-name>
+	   <url-pattern>/index/index/borrowing</url-pattern>
+	 </servlet-mapping>
+	 
+	 <!-- 查找用户信息 -->
+	<servlet>
+	   <description>This is the description of my J2EE component</description>
+	   <display-name>This is the display name of my J2EE component</display-name>
+	   <servlet-name>FindUserInfoServlet</servlet-name>
+	   <servlet-class>application.index.servlet.user.FindUserInfoServlet</servlet-class>
+	 </servlet>
+	
+	 <servlet-mapping>
+	   <servlet-name>FindUserInfoServlet</servlet-name>
+	   <url-pattern>/index/common/edit_user_info</url-pattern>
+	 </servlet-mapping>
+	 
+	  <!-- 修改用户信息 -->
+	<servlet>
+	   <description>This is the description of my J2EE component</description>
+	   <display-name>This is the display name of my J2EE component</display-name>
+	   <servlet-name>EditUserInfoServlet</servlet-name>
+	   <servlet-class>application.index.servlet.user.EditUserInfoServlet</servlet-class>
+	 </servlet>
+	
+	 <servlet-mapping>
+	   <servlet-name>EditUserInfoServlet</servlet-name>
+	   <url-pattern>/index/common/edit_user</url-pattern>
+	 </servlet-mapping>
+	 
+	 <!-- 管理员退出销毁session -->
+	<servlet>
+	   <description>This is the description of my J2EE component</description>
+	   <display-name>This is the display name of my J2EE component</display-name>
+	   <servlet-name>UnloginServlet</servlet-name>
+	   <servlet-class>application.admin.servlet.login.UnloginServlet</servlet-class>
+	 </servlet>
+	
+	 <servlet-mapping>
+	   <servlet-name>UnloginServlet</servlet-name>
+	   <url-pattern>/admin/unlogin</url-pattern>
+	 </servlet-mapping>
+</web-app>
